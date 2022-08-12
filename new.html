@@ -1,0 +1,122 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+    <link rel="icon" type="image/png" sizes="16x16" href="#">
+    <!-- base style -->
+    <link rel="stylesheet" href="new.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <!-- bootstrap css-->
+    <script src="new.js"></script>
+    
+    
+</head>
+
+<body>
+    <div class="description">
+        <div>
+        <h1>Horizontal "<code>containerAnimation</code>"</h1>
+          <p>Scroll this page vertically and you'll see a horizontal fake-scrolling section where a container is animated on the x-axis using a ScrollTrigger animation. With <code>containerAnimation</code> you can trigger animations when certain elements <i>inside</i> that container enter the viewport horizontally! It's like a ScrollTrigger inside of a ScrollTrigger. 🤯
+           </p>
+        </div>
+            <div class="scroll-down">Scroll down<div class="arrow"></div></div>
+      </div>
+      
+      <div class="container">
+        
+        <div class="panel blue">
+          Scroll down to animate horizontally &gt;
+        </div>
+        
+        <section class="panel red">
+          <div>
+          <pre class="code-block prettyprint lang-js linenums">gsap.to(".box-1", {
+        y: -130,
+        duration: 2,
+        ease: "elastic",
+        scrollTrigger: {
+          trigger: ".box-1",
+          containerAnimation: scrollTween,
+          start: "left center",
+          toggleActions: "play none none reset"
+        }
+      });</pre>
+            Fire an animation at a particular spot...
+          </div>
+          <div class="box-1 box">box-1</div>
+        </section>
+        
+        <section class="panel gray">
+          <div>
+          <pre class="code-block prettyprint lang-js linenums">gsap.to(".box-2", {
+        y: -120,
+        backgroundColor: "#1e90ff",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".box-2",
+          containerAnimation: scrollTween,
+          start: "center 80%",
+          end: "center 20%",
+          scrub: true
+        }
+      });</pre>
+        ...or scrub it back &amp; forth with the scrollbar
+      </div>
+          <div class="box-2 box">box-2</div>
+        </section>
+        <section class="panel purple">
+          <div>
+          <pre class="code-block prettyprint lang-js linenums">ScrollTrigger.create({
+        trigger: ".box-3",
+        containerAnimation: scrollTween,
+        toggleClass: "active",
+        start: "center 60%"
+      });</pre>
+            Toggle a CSS class
+          </div>
+          <div class="box-3 box">box-3</div>
+        </section>
+        <section class="panel green">
+          <div>
+          <pre class="code-block prettyprint lang-js linenums">ScrollTrigger.create({
+        trigger: ".green",
+        containerAnimation: scrollTween,
+        start: "center 65%",
+        end: "center 51%",
+        onEnter: () => console.log("enter"),
+        onLeave: () => console.log("leave"),
+        onEnterBack: () => console.log("enterBack"),
+        onLeaveBack: () => console.log("leaveBack"),
+        onToggle: self => console.log("active", self.isActive)
+      });</pre>
+            Use the rich callback system
+          </div>
+        </section>
+      </div>
+      
+      <div class="final">
+        <div>
+          <h1>Wasn't that fun?</h1>
+          <p>Here are a few caveats to keep in mind:</p>
+          <ul>
+            <li>The fake-scrolling animation (just the part that's moving the container horizontally) must have no easing (<code>ease: "none"</code>).</li>
+            <li>Pinning and snapping won't work on ScrollTriggers with a <code>containerAnimation</code>.</li>
+            <li>The mapping of scroll position trigger points are based on the trigger element itself not being animated horizontally (inside the container). If you need to animate the trigger, you can either wrap it in a &lt;div&gt; and use that as the trigger instead or just factor the trigger's movement into your end position. For example, if you animate it left 100px, make the <code>end</code> 100px further to the left.</li>
+            <li>Requires ScrollTrigger 3.8.0 or later</li>
+          </ul>
+        </div>
+      </div>
+      
+      
+      
+      <header>
+        <a href="https://greensock.com/scrolltrigger">
+          <img class="greensock-icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/scroll-trigger-logo-light.svg" width="200" height="64" />
+        </a> 
+      </header>
+</body>
+</html>
