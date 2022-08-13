@@ -14,10 +14,10 @@ let scrollTween = gsap.to(sections, {
     }
   });
 
-gsap.set(".box-1, .box-2", {y: 100});
-ScrollTrigger.defaults({markers: {startColor: "white", endColor: "white"}});
+/*gsap.set(".box-1, .box-2", {y: 100});*/
+/*ScrollTrigger.defaults({markers: {startColor: "white", endColor: "white"}});*/
 
-// red section
+/* // red section
 gsap.to(".box-1", {
   y: -130,
   duration: 2,
@@ -69,9 +69,11 @@ ScrollTrigger.create({
   onToggle: self => console.log("active", self.isActive),
   id: "4"
 });
+ */
+
 
 // only show the relevant section's markers at any given time
-gsap.set(".gsap-marker-start, .gsap-marker-end, .gsap-marker-scroller-start, .gsap-marker-scroller-end", {autoAlpha: 0});
+/* gsap.set(".gsap-marker-start, .gsap-marker-end, .gsap-marker-scroller-start, .gsap-marker-scroller-end", {autoAlpha: 0});
 ["red","gray","purple","green"].forEach((triggerClass, i) => {
   ScrollTrigger.create({
     trigger: "." + triggerClass,
@@ -81,7 +83,7 @@ gsap.set(".gsap-marker-start, .gsap-marker-end, .gsap-marker-scroller-start, .gs
     markers: false,
     onToggle: self => gsap.to(".marker-" + (i+1), {duration: 0.25, autoAlpha: self.isActive ? 1 : 0})
   });
-});
+}); */
 
 // helper function for causing the sections to always snap in the direction of the scroll (next section) rather than whichever section is "closest" when scrolling stops.
 // function directionalSnap(increment) {

@@ -7,11 +7,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="#">
     <link rel="icon" type="image/png" sizes="16x16" href="#">
     <!-- base style -->
+
     <link rel="stylesheet" href="new.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <!-- bootstrap css-->
-    <script src="new.js"></script>
+    
     
     
 </head>
@@ -34,17 +32,7 @@
         
         <section class="panel red">
           <div>
-          <pre class="code-block prettyprint lang-js linenums">gsap.to(".box-1", {
-        y: -130,
-        duration: 2,
-        ease: "elastic",
-        scrollTrigger: {
-          trigger: ".box-1",
-          containerAnimation: scrollTween,
-          start: "left center",
-          toggleActions: "play none none reset"
-        }
-      });</pre>
+         
             Fire an animation at a particular spot...
           </div>
           <div class="box-1 box">box-1</div>
@@ -52,47 +40,21 @@
         
         <section class="panel gray">
           <div>
-          <pre class="code-block prettyprint lang-js linenums">gsap.to(".box-2", {
-        y: -120,
-        backgroundColor: "#1e90ff",
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".box-2",
-          containerAnimation: scrollTween,
-          start: "center 80%",
-          end: "center 20%",
-          scrub: true
-        }
-      });</pre>
+          
         ...or scrub it back &amp; forth with the scrollbar
       </div>
           <div class="box-2 box">box-2</div>
         </section>
         <section class="panel purple">
           <div>
-          <pre class="code-block prettyprint lang-js linenums">ScrollTrigger.create({
-        trigger: ".box-3",
-        containerAnimation: scrollTween,
-        toggleClass: "active",
-        start: "center 60%"
-      });</pre>
+          
             Toggle a CSS class
           </div>
           <div class="box-3 box">box-3</div>
         </section>
         <section class="panel green">
           <div>
-          <pre class="code-block prettyprint lang-js linenums">ScrollTrigger.create({
-        trigger: ".green",
-        containerAnimation: scrollTween,
-        start: "center 65%",
-        end: "center 51%",
-        onEnter: () => console.log("enter"),
-        onLeave: () => console.log("leave"),
-        onEnterBack: () => console.log("enterBack"),
-        onLeaveBack: () => console.log("leaveBack"),
-        onToggle: self => console.log("active", self.isActive)
-      });</pre>
+          
             Use the rich callback system
           </div>
         </section>
@@ -119,4 +81,9 @@
         </a> 
       </header>
 </body>
+
+<script src="ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script src="new.js"></script>
 </html>

@@ -66,4 +66,24 @@ body {
   
   .panel {
     font-weight: 300;
+    width: 280vh;
+  }
+
+  .green{
+    background-color: green;
+  }
+  .blue{
+    background-color: rgb(0, 34, 128);
+  }
+  .red{
+    background-color: rgb(128, 0, 0);
+  }
+  .orange{
+    background-color: rgb(255, 170, 0);
+  }
+  .purple{
+    background-color: rgb(128, 0, 124);
+  }
+  .gray{
+    background-color: rgb(67, 67, 67);
   }

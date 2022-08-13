@@ -1,0 +1,32 @@
+/* Global styles come from external css https://codepen.io/GreenSock/pen/gOWxmWG */
+
+body {
+  overscroll-behavior: none;
+  height: 100vh;
+}
+.container {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.panel{
+  width:30er;
+}
+.green{
+  background-color: green;
+}
+
+.red{
+  background-color: rgb(128, 0, 0);
+}
+.orange{
+  background-color: rgb(255, 170, 0);
+}
+.purple{
+  background-color: rgb(128, 0, 124);
+}
+.gray{
+  background-color: rgb(67, 67, 67);
+}

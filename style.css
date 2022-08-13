@@ -29,9 +29,13 @@
     box-sizing: border-box;
   }
   
-  html {
+ /*  html {
     scroll-snap-type: y mandatory;
-  }
+  } */
+
+ .snappy {
+    scroll-snap-type: y mandatory;
+  } 
 
   body{
     margin: 0;
@@ -136,4 +140,13 @@
     .shadow-lg {
       height: 750px;
     }
+  }
+
+
+
+  /*/////////////////////////////////////////////////////*/
+
+
+  .none{
+    display: none !important;
   }
