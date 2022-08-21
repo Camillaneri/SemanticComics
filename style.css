@@ -29,9 +29,9 @@
     box-sizing: border-box;
   }
   
- /*  html {
+  html {
     scroll-snap-type: y mandatory;
-  } */
+  } 
 
  .snappy {
     scroll-snap-type: y mandatory;
@@ -94,7 +94,7 @@
   /* Photos background */
 
   .intro-slide {
-    background-image: url('https://i0.wp.com/mindonfirebooks.com/wp-content/uploads/2020/04/tablet-library.jpg');
+    background-image: url('imgs/erik-mclean-8SeJUmfahu0-unsplash.jpg');
     width: 100vw;
     height: 100vh;
     background-position: center;
@@ -102,10 +102,17 @@
     background-size: cover;
   }
 
+
+
   /* Color background */
 
   .first-slide {
-    background-color: aqua;
+    background-image: url('imgs/brett-jordan-CsZQ50xO35I-unsplash.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .second-slide {
@@ -124,6 +131,22 @@
     background-color:darkred;
   }
 
+  .second-2-slide{
+    background-color:rgb(76, 44, 255);
+  }
+
+  .third-2-slide {
+    background-color:rgb(35, 151, 0);
+  }
+
+  .carousel0-slide{
+    background-image: url('imgs/jonathan-cooper-OOKnZA6nhqA-unsplash.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   /* mobile fixes */ 
 
   @media (max-width: 425px) {
@@ -149,4 +172,63 @@
 
   .none{
     display: none !important;
+  }
+
+  .inside-carousel{
+    height: 60%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  
+  #chevron {
+   
+    position: relative;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 60px;
+    width: 30px;
+  }
+  #chevron:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 51%;
+    background: red;
+    transform: skew(0deg, 40deg);
+  }
+  #chevron:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 10%;
+    width: 50%;
+    background: red;
+    transform: skew(0deg, -40deg);
+  }
+
+  .hidden{
+    visibility:hidden;
+  }
+
+  .downarrow{
+    width: 16vh;
+    height: 10vh;
+    margin-left: 42.6%;
+    border: none !important;
+    background-color: rgba(126, 30, 30, 0) !important;
+  }
+
+  .arrowdown{
+    margin-left: 4%;
+  }
+
+  .contain-arrow{
+    
   }

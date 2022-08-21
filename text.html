@@ -1,0 +1,517 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+    <link rel="icon" type="image/png" sizes="16x16" href="#">
+    <!-- base style -->
+    <link rel="stylesheet" href="css/website_style.css"/>
+    <!-- bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</head>
+<body>
+    <main>
+        <section class="v-child first-slide">
+            <div class="container flex-column">
+                <div class="p-5 mb-2">
+                    <!-- empty-->
+                </div>       
+                <div class="shadow-lg p-4 bg-body rounded overflow-auto">
+                    <h2>Introduction</h2>
+                    <p>Comics offer an interesting challenge to libraries. Traditional integration has focused on enabling public access to existing material and its bibliographic data, while semantic web technologies and standards, alongside machine learning approaches, have been used to explore how the medium can fit into the evolving concept, and reality, of a digital library.</p>
+                    <p>In this project, we sketch out a potential framework for what a semantic digital library dedicated to this popular literary medium might look like. </p>
+                    <p>Our approach is split into five parts:</p>
+                    <ul>
+                        <li>Definitions and state of the art in comics integration for digital libraries</li>
+                        <li>Review of three existing resources</li>
+                        <li>Outline of potential users</li>
+                        <li>Framework for creating or updating semantic digital libraries dedicated to comics</li>
+                        <li>Example implementation of framework using reviewed resources</li>
+                    </ul>
+
+                    <h2>A note on Definition</h2>
+                    <p>“Defining comics entails cutting a Gordian-knotted enigma wrapped in a mystery” - R. C. Harvey, 2001 </p>
+                    <p>This project deals with comics as a medium, a way of communicating information that involves the combination of text and drawn images, and as a format, the ways in which this communication is physically or digitally delivered to a user. Complicating things further are the connotations associated with the word ‘comics’ itself, the most important being its direct evocation of a US and British take on the medium popularized in the early parts of the 20th century and which has become synonymous with the word.</p> 
+                    <p>We’ll use the word comics to broadly refer to the medium, regardless of its format, and when necessary we will refer to specific instances of formats. The three of us have an interest in and experiences with comics beyond their US/British connotations (Italian fumetti, French bandes dessinée, and Japanese manga) as well as with both its physical and digital formats. To be a comics fan today means having an intrinsic understanding, if not outright knowledge, of the medium’s historical and cultural versatility and the fluidity of its format.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="v-child h-sect">
+            <div class="h-child second-slide">
+                <div class="container flex-column">
+                    <div class="p-5 mb-2">
+                        <!-- empty-->
+                    </div>       
+                    <div class="shadow-lg p-4 bg-body rounded overflow-auto">
+                        <h2>Background & State of the Art</h2>
+                        <p>Following their beginnings in the first half of the 19th century as social satire, comics were long thought as a non-serious literary format due in part to their intrinsic combination of texts and images. Their continuous popularity throughout the 20th century in the United States, Europe, and Japan would ultimately change this perception.</p> 
+                        <p>Today, many fields within the humanities - such as literary studies or library and information science - treat comics as a serious subject of study while GLAM institutions - including the Library of Congress and Bibliothèque Nationale de France - consider it a valid acquisition for <a href="https://www.loc.gov/rr/news/comics.html" target="_blank">preservation</a> and investment for <a href="https://bdnf.bnf.fr/EN/index.html" target="_blank">public engagement</a>.</p>
+                        <p>Scroll left for an overview of existing research and projects dealing with comics and semantic digital technologies.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="h-child third-slide">
+                <div class="container flex-column">
+                    <div class="p-5 mb-2">
+                        <!-- empty-->
+                    </div>       
+                            <div class="shadow-lg p-4 bg-body rounded">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link active" id="corp-tab" data-bs-toggle="tab" data-bs-target="#corp" type="button" role="tab" aria-controls="corp" aria-selected="true">Corpora</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="false">Datasets</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="onto-tab" data-bs-toggle="tab" data-bs-target="#onto" type="button" role="tab" aria-controls="onto" aria-selected="false">Ontologies</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="onto-tab" data-bs-toggle="tab" data-bs-target="#onto" type="button" role="tab" aria-controls="onto" aria-selected="false">Ontologies</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="markup-tab" data-bs-toggle="tab" data-bs-target="#markup" type="button" role="tab" aria-controls="markup" aria-selected="false">Markup</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="apps-tab" data-bs-toggle="tab" data-bs-target="#apps" type="button" role="tab" aria-controls="apps" aria-selected="false">Apps / API</button>
+                                    </li>
+                                  </ul>
+                            <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active mt-3" id="corp" role="tabpanel" aria-labelledby="corp-tab">
+                                <h3><a href="https://groups.uni-paderborn.de/graphic-literature/gncorpus/corpus.php" target="_blank">Graphic Narrativity Corpus</a></h3>
+                                <p>Produced by Hybrid Narrativity, a DH research project focused on graphic novels at the universities of Paderborn and Potsdam in Germany. The GNC was conceived as a monitor corpus, with regular updates, and currently contains around 240 titles, starting from the mid-1970s, of what the group defines as graphic narratives including “fictional and non-fictional texts, such as graphic novels and memoirs, graphic journalism, and [...] graphic fantasy, including comic books.” The project’s website allows users to browse the corpus by authors and title as well as showcasing some statistical information via a series of basic visualisations. </p>
+                                <h3><a href="https://www.visuallanguagelab.com/vlrc" target="_blank">Visual Language Research Corpus</a></h3>
+                                <p>Produced by Visual Language Lab, a research group devoted to linguistic and cognitive research on visual language and multimodality primarily based at Tilburg University. Where the GNC focuses on the text of comics, the VLRC is instead a corpus of annotated comics focused on enabling analysis of visual languages worldwide. It features over 36,000 panels from European, Asian, and American comics from 1940 to the present and its annotations include coding of panel frames, semantic relationships between panels, layout, and multimodality. The corpus is still in the process of being released to the public, expected sometime in 2022, and the group’s research continues with the TINTIN project which seeks to analyse “visual narratives as a window into language and cognition.”</p>
+                            </div>
+                            <div class="tab-pane fade mt-3" id="data" role="tabpanel" aria-labelledby="data-tab">
+                                <h3><a href="https://www.mdpi.com/2313-433X/4/7/89/htm#sec7dot1dot3-jimaging-04-00089" target="_blank">DCM772</a>, <a href="https://ebdtheque.univ-lr.fr/database/" target="_blank">eBDtheque</a>, <a href="https://arxiv.org/abs/1611.05118" target="_blank">COMICS</a>, <a href="https://fgc.univ-lr.fr/task/" target="_blank">ICDAR2019FGC</a>, <a href="http://www.manga109.org/en/index.html" target="_blank">Manga 109</a></h3>
+                                <p>Datasets of annotated comic pages appear to be few and far between, and are all the direct product of academic research and in particular research into machine learning and automation of tasks such as character recognition, object metadata, image indexing, and multimodality. While many of these datasets are describe as being public, in truth none of them are easily accessible to the public.</p>
+                                <p>Both DCM772 and edBDtheque were produced by academics at the University of La Rochelle in France, and require specific access request. The former includes 772 images taken from the Digital Comics Museum, an archive of public domain golden era comics which is assessed in this project, and annotations relating to bounding, character, and text recognition, while the later includes 100 pages from European, Japanese, and American comics with manual annotations and metadata for text lines, balloons, and panels. </p>
+                                <p>ICDAR2019FGC is a dataset extracted from DCM772, the result of an academic competition, and further focuses on fine-grained classification of characters. </p>
+                                <p>COMICS is the largest of the datasets, with over 1.2 million panels also extracted from the DCM archive, and annotated to enable narrative prediction based on a combination of text, images, and their bounding. It was created by academics at the University of Maryland, College Park and University of Colorado, Boulder.</p> 
+                                <p>Lastly, Manga109 is the only dataset we could find devoted exclusively to the Japanese version of the medium, produced by the Aizawa Yamasaki Matsui Laboratory, at the University of Tokyo. It includes 109 annotated manga volumes released between the 1970s and 2010s and intended for academic research or non-profit use (a subset is available for commercial use). Annotations include character faces and bodies, text, and frame. The project also includes a simple Python API to read annotation data while a dataset of onomatopoeias is currently under construction.</p>
+                                <h3><a href="https://www.comics.org/download/" target="_blank">GCD data dump</a></h3> 
+                                <p>The Grand Comics Database is one of the three resources we assess in this project. The GCD is focused on cataloguing comics bibliographic data, with images of covers the only non-textual asset within the database. As part of their cataloguing and preservation efforts, the GCD makes their database available as either a MySQL or name-value dump that uses a table-driven schema.</p>
+                                <h3><a href="https://graphicpossibilities.hcommons.org/comics-as-data-north-america-cadna/" target="_blank">Comics as Data: North America</a></h3>
+                                <p>The CaDNA is an ongoing project started in 2018 that “examines library catalog data to explore geographies of publishing and library collecting policies in North American comics.” The project draws from Michigan State University Library (MSUL) Comic Art Collection and has been driven by the university’s Graphic Possibilities Research Workshop, which has used edit-a-thons as a means to explore and expand the original MARC data. This data has been released publicly via github, and has been used to create vizualisations.</p>  
+                            </div>
+                            <div class="tab-pane fade mt-3" id="onto" role="tabpanel" aria-labelledby="onto-tab">
+                                <h3><a href="https://sean.petiya.com/thesis/" target="_blank">Comic Book Ontology (CBO)</a></h3> 
+                                <p>Created by Sean Petiya as part of his 2014 thesis at Kent State University, CBO is the first publicly available RDFS/OWL vocabulary dedicated to describing comics both in narrative and physical form. Petiya hopes that its conceptualization of the medium would allow it to be used to describe a variety of comics formats while also allowing “for further describing other aspects of comics culture and scholarship, or connecting, community created data to Semantic Web applications, such as next-generation library catalogs.”</p> 
+                                <h3><a href="https://schema.org/ComicSeries" target="_blank">Schema.org's ComicSeries type</a></h3>
+                                <p>In 2014, Schema.org added the ComicSeries type and related properties, placed under its Periodical type, which allows for the integration of comics related information into the wider Linked Open Data world. Marvel, one of the largest and best known comics publishers in the world, was part of the groups that pushed for the addition of the CosmicSeries type and while they do not accurately detail the origins of their own schema (used in the API) it appears to use ComicSeries in some way. </p>
+                                <h3><a href="https://dcpapers.dublincore.org/pubs/article/download/979/952.pdf" target="_blank">Metadata Framework for Manga</a></h3>
+                                <p>Proposed in 2009 by academics at the university of Tsukuba, the Metadata Framework for Manga defines three key aspects of Japanese comics - bibliographic, structural, and intellectual entities - with digital as the primary format. The framework is built on top of the FRBR and TV-Anytime models, extending these to allow various descriptions of manga that are key to their actual usage such as translations and narrative structure. </p>
+                                <h3><a href="http://www.r4isstatic.com/231" target="_blank">A Comics Ontology</a></h3> 
+                                <p>Proposed by Paul Rissen in the early 2010s, this ontology is another early attempt at creating a way to  “describe the form of comics, and their narrative content, rather than the bibliographical information.” It is cited by the eBDtheque creators as an inspiration for their own custom vocabulary used in their project.</p> 
+
+                            </div>
+                            <div class="tab-pane fade mt-3" id="markup" role="tabpanel" aria-labelledby="markup-tab">
+                                <h3><a href="https://dcl.ils.indiana.edu/cbml/#:~:text=Comic%20Book%20Markup%20Language%2C%20or,formal%20features%20with%20comics%20content." target="_blank">Comic Book Markup Language</a>, <a href="https://launchpad.net/acbf/" target="_blank">Advanced Comic Book Format</a>, <a href="http://www.denvog.com/comet/" target="_blank">CoMet</a>, <a href="http://comicsml.jmac.org/" target="_blank">ComicsML</a></h3>
+                                <p>XML schemas are an obvious tool to help describe, model, and integrate comics - especially digital ones - into the open web, libraries, and archives. The Comic Book Markup Language, Advanced Comic Book Format, CoMet and ComicsML are the most notable, and commonly referenced, efforts. They all began in the early 2010s and take various approaches to extending XML for the purposes of representing document structure, visual sequences, textual features, descriptive information, and metadata.</p> 
+                                <p>The difference in approaches also includes how XML is extended: CBML is based on TEI; ComicsML is available as a Document Type Definition; ACBF and CoMet are both XML Schema Definition, with the former extensively detailed while the latter is more narrow and makes use of the Dublin Core Metadata Element Set. </p>
+                            </div>
+                            <div class="tab-pane fade mt-3" id="apps" role="tabpanel" aria-labelledby="apps-tab">
+                                <h3><a href="https://bdnf.bnf.fr/EN/index.html" target="_blank">Comics Factory</a>, <a href="https://developer.marvel.com/" target="_blank">Marvel API</a>, <a href="https://comicvine.gamespot.com/api/" target="_blank">Comic Vine API</a>, <a href="https://metron.cloud/" target="_blank">Metron</a></h3>  
+                                <p>Digital applications and interfaces offer an ideal way to make existing comics-related data and tools available to the public to both educate and entertain.</p> 
+                                <p>Yet in our research we’ve only found one example of a non-commercial, public-funded app that combines cultural heritage and digital humanities: BnF’s BDnF: The Comics Factory, which lets users create digital comics using the library’s collections.</p>
+                                <p>Alongside this there are a small number of APIs that deal with comics data including the aforementioned Marvel API, which grants access to information about the company’s publications; the Comic Vine API, giving access to data from Gamespot’s comic b   ook wiki for non-commercial use; and Metron, a community-driven effort intended as a counterpoint to Comic Vine’s corporate standing which is building an open database with REST API for comics and makes use of bibliographic data from the GCD.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="v-child h-sect">
+            <div class="h-child third-slide">
+                <div class="container flex-column">
+                    <div class="p-5 mb-2">
+                        <!-- empty-->
+                    </div>       
+                    <div class="shadow-lg p-4 bg-body rounded overflow-auto">
+                        <h2>Existing Resources - Reviews</h2>
+                        <p>A starting point for our project was to look at, and assess, three existing digital libraries dedicated to comics. From this assessment we developed the idea of sketching out a framework that could be used to enhance existing comics-focused digital libraries or create new ones.</p> 
+                        <p>The three resources we selected were: <a href="https://digitalcomicmuseum.com/" target="_blank">Digital Comics Museum (DCM)</a>, the <a href="https://www.comics.org/" target="_blank">Grand Comics Database (GCD)</a>, and the <a href="https://archive.org/details/comics" target="_blank">Internet Archive's Comic Books and Graphic Novels collection</a>.</p>
+                        <p>Scroll left for the reviews.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="h-child fourth-slide">
+                <div class="container flex-column">
+                    <div class="p-5 mb-2">
+                        <!-- empty-->
+                    </div>       
+                            <div class="shadow-lg p-4 bg-body rounded">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link active" id="dcm-tab" data-bs-toggle="tab" data-bs-target="#dcm" type="button" role="tab" aria-controls="dcm" aria-selected="true">DCM</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="gcd-tab" data-bs-toggle="tab" data-bs-target="#gcd" type="button" role="tab" aria-controls="gcd" aria-selected="false">GCD</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="ia-tab" data-bs-toggle="tab" data-bs-target="#ia" type="button" role="tab" aria-controls="ia" aria-selected="false">Internet Archive</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="over-tab" data-bs-toggle="tab" data-bs-target="#over" type="button" role="tab" aria-controls="over" aria-selected="false">Overview</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="sum-tab" data-bs-toggle="tab" data-bs-target="#sum" type="button" role="tab" aria-controls="sum" aria-selected="false">Summary</button>
+                                    </li>
+                                  </ul>
+                            <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active mt-3" id="dcm" role="tabpanel" aria-labelledby="dcm-tab">
+                                <p>The Digital Comic Museum is a digital library of comic books in the public domain, established in 2010. The library was originally started in 2006, under the name GoldenAgeComics.co.uk. Dealing strictly with public domain comics from the 1930s to late 1950s, it directly held the books for download, rather than pointing to torrents and proved very popular. Since 2010, the library has experienced a gradual decline and after a server move, the underlying GAC software and database became increasingly unstable. In addition, the DCM has had to deal with spammers and several attacks. </p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul>
+                                            <li>Downloadable public domain golden age comics.</li>
+                                            <li>Scans uploaded by users.</li>
+                                            <li>Scans viewable via image carousel, downloads reserved for members.</li>
+                                            <li>Run by volunteers.</li>
+                                            <li>Financed by donors: donations pay server bills, bandwidth and future expansion and give user accounts VIP status (unlimited access to the website).</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul>
+                                            <li>Metadata: submitted by uploaders or taken from the Grand Comics Database. Inconsistent and can’t be searched directly.</li>
+                                            <li>Technologies: powered by Simple Machines Forum (SMF), an open-source, PHP forum/message board solution. Uses MySQL for database management.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade mt-3" id="gcd" role="tabpanel" aria-labelledby="gcd-tab">
+                                <p>The Grand Comics Database™ is a nonprofit, internet-based organization of international volunteers dedicated to building a database covering all printed comics worldwide. It aspires to be the world's most comprehensive online comics database for comic readers, collectors, scholars, and professionals. The GCD catalogues information on creators, story details, reprints, and other potentially useful information.</p>
+                                <p>Its history goes back to 1978 when the GCD's immediate predecessor, APA-I (Amateur Press Alliance for Indexing), was formed by a few fans interested in exchanging information on comic books in index form. In late 1993 and early 1994, three members of APA-I interested in comic books started up an e-mail correspondence. Tim Stroup, Bob Klein, and Jonathan E. Ingersoll soon began sharing indexing information in a common format using electronic media for storage and distribution. By March 1994, they had formed a new group to create an electronic version of APA-I related to comic books, giving it the name Grand Comic-Book Database and the goal to 'contain information on every comic book ever published.'</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul>
+                                            <li>Defines comic book as 50% or more art and/or pictures which tell a story. This definition excludes non-physical formats, such as web or digital comics, but it includes small print run fanzines, promotional giveaway comics, and mini-comics. Although syndicated comic strips are not indexed, listings include mentions of comic books reprinting newspaper strips.</li>
+                                            <li>International: GCD has comic books from many countries representing over forty languages.</li>
+                                            <li>Run by a team of volunteers, who answer to a chart of guidelines.</li>
+                                            <li>Membership is regulated by the Board and gives users responsibilities and advantages inside the community.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul>
+                                            <li>User reviews and feedback.</li>
+                                            <li>Tutorials for contributors.</li>
+                                            <li>Metadata: uses a custom schema based on public and private tables, in the process of being udpated to reflect Django architecture.</li>
+                                            <li>Technologies: the GCD is implemented as a Django-based web application, using MySQL as a database; Haystack; Elasticsearch. Underlying technology detailed on <a href="https://github.com/GrandComicsDatabase" target="_blank">github</a>.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade mt-3" id="ia" role="tabpanel" aria-labelledby="ia-tab">
+                                <p>Essentially a category page within the wider Internet Archive, a non-profit initiative that has been building a free digital library of internet sites and cultural artifacts in digital form since 1996. The comic books category page is one of hundreds which is used to organize the information collected by IA and uploaded by its users, and part of the more than 38 million books and texts it holds.</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul>
+                                            <li>User reviews.</li>
+                                            <li>About page detailing creator of category, contributors, and stats for views, items uploaded, regions accessing content, and collection (category) metadata (identifiers, language, media type, filters).</li>
+                                            <li>Detailed metadata on OCR / scanning process.</li>
+                                            <li>High quality scans available via a JS viewer in browser.</li>
+                                            <li>Accessibility functionalities including Text-To-Speech and different view types.</li>
+                                            <li>Multiple download options including text / pdf files, OCR, and torrent files.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul>
+                                            <li>Collection pages have a set of basic filters for media types, publishers, years, topics etc...</li>
+                                            <li>Collection is international, and allows inclusion of sub collections (for specific comics/publishers). However, it also includes non-comics content such as novelizations.</li>
+                                            <li>Metadata: based on Dublin Core, extended for specific needs and user control. Included with every item as an .xml file. Metadata powers recommendation system at the bottom of each page.</li>
+                                            <li>Technologies: IA primarily uses HTML5 and jQuery for its front-end services, but gives no public details for the library's underlying infrastructure.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade mt-3" id="over" role="tabpanel" aria-labelledby="over-tab">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">DCM</th>
+                                        <th scope="col">GCD</th>
+                                        <th scope="col">IA</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">Pros</th>
+                                        <td>
+                                            <ul>
+                                                <li>Public domain content.</li>
+                                                <li>User-submitted content.</li>
+                                                <li>Data used by researchers.</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Well-structured metadata.</li>
+                                                <li>Detailed documentation.</li>
+                                                <li>User contributions with tutorials.</li>
+                                                <li>User reviews.</li>
+                                                <li>International collection.</li>
+                                                <li>Data sharing.</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Detailed scanning and OCR metadata.</li>
+                                                <li>Metadata-powered recommendations.</li>
+                                                <li>User-friendly reader with accessibility options.</li>
+                                                <li>Multiple download options.</li>
+                                                <li>Search filters.</li>
+                                                <li>User reviews.</li>
+                                                <li>International collection.</li>
+                                            </ul>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Cons</th>
+                                        <td>
+                                            <ul>
+                                                <li>Outdated front and back-end infrastructure.</li>
+                                                <li>Scarse, inconsistent metadata.</li>
+                                                <li>Small scope due to golden age focus.</li>
+                                                <li>No OCR.</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Outdated, text-heavy front-end.</li>
+                                                <li>Data only available as MySQL or name/value.</li>
+                                                <li>No Machine Learning implementations.</li>
+                                                <li>Catalogue only focus.</li>
+                                                <li>Limited to physical media.</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Includes non-comics material.</li>
+                                                <li>Limited focus due to being one collection among thousands.</li>
+                                                <li>Front-end limited to generic IA interface.</li>
+                                                <li>Limited bibliographic information.</li>
+                                            </ul>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                
+                            </div>
+                            <div class="tab-pane fade mt-3" id="sum" role="tabpanel" aria-labelledby="sum-tab">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">DCM</th>
+                                        <th scope="col">GCD</th>
+                                        <th scope="col">IA</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">Content</th>
+                                        <td>Golden age comics.</td>
+                                        <td>Physical comics only, international.</td>
+                                        <td>Any comics-related printed and digital content, international.</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">User Contribution</th>
+                                        <td>Yes.</td>
+                                        <td>Yes.</td>
+                                        <td>Yes.</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Metadata</th>
+                                        <td>Limited, inconsistent.</td>
+                                        <td>Custom, well-structured.</td>
+                                        <td>Based on DC, well-structured.</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Machine Learning</th>
+                                        <td>None.</td>
+                                        <td>None.</td>
+                                        <td>OCR.</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Aesthetics</th>
+                                        <td>Outdated, text-heavy.</td>
+                                        <td>Outdated, text-heavy.</td>
+                                        <td>Minimalist, site-wide template.</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="v-child first-slide">
+            <div class="container flex-column">
+                <div class="p-5 mb-2">
+                    <!-- empty-->
+                </div>       
+                <div class="shadow-lg p-4 bg-body rounded overflow-auto">
+                    <h2>users</h2>
+                    <p>In recent years there has been a shift in attention in the designing process of digital cultural objects from the technological and technical aspect to the whole experience of the user. For Digital libraries in particular it’s become evident that the quality and importance of content doesn’t matter when the knowledge can’t be delivered to the user in a way that is comprehensible and useful for them.</p>
+                    <p>In order to delineate some possible user types for our framework we looked at existing surveys of comics readers, user studies in digital libraries, and existing documentation in libraries we reviewed.</p>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="survey-tab" data-bs-toggle="tab" data-bs-target="#survey" type="button" role="tab" aria-controls="survey" aria-selected="true">Surveys</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="lib-tab" data-bs-toggle="tab" data-bs-target="#lib" type="button" role="tab" aria-controls="lib" aria-selected="false">Digital Libraries</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="false">DCM, GCD, IA</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="false">Summary</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="user-tab" data-bs-toggle="tab" data-bs-target="#user" type="button" role="tab" aria-controls="user" aria-selected="false">User Types</button>
+                        </li>
+                      </ul>
+                <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active mt-3" id="survey" role="tabpanel" aria-labelledby="survey-tab">
+                    <p>Using the results of five different surveys on comics readers from Italy, France, and North America we can see some generic trends about comics usage:</p>
+                    <ul>
+                        <li>More popular with men than women.</li>
+                        <li>More popular with younger demographics (25 and under).</li>
+                        <li>Women prefer graphic novels.</li>
+                        <li>Print is still the preferred medium but digital is increasing in readership.</li>
+                        <li>Comics are an important part of public library offerings.</li>
+                        <li>Readers enjoy a variety of types of comics, with manga a particularly important type regardless of the origin of the reader.</li>
+                    </ul>
+                    <p>Surveys referenced include:</p>
+                    <ul>
+                        <li>Chi è il lettore di fumetti in Italia? (Who is the comic reader in Italy?), 2021, AIR (Italian Reader Association), Italy </li>
+                        <li>Public Library Graphic Novels Survey, 2018, Library Journal, North America</li>
+                        <li>BD reader in France, 2020, IPSOS, France </li>
+                        <li>Montréal Library survey, 2005, Canada  </li>
+                        <li>Manga Planet survey, 2019, online </li>
+                    </ul>
+
+                </div>
+                <div class="tab-pane fade mt-3" id="lib" role="tabpanel" aria-labelledby="lib-tab">
+                    <p>To understand the needs of digital libraries users we need to first understand who they are and why they might want to brwose.</p>
+                    <p>A comparative study conducted by Walsh et al. (2016), reviewing existing literature on user characterization in digital archives, museums and libraries, identifies three different way to categorize users: by expertise level, by information needs, and by motivation and role.</p>
+                    <ul>
+                        <li>Expertise level: four types of users incl. professional, lay, experienced, and novel.</li>
+                        <li>Information needs: three types incl. general, educational, specialist.</li>
+                        <li>Motivation & role: identifies a type of ‘unaffiliated scholar’ that covers journalists, teachers, writers, and other creative types with an interest in Cultural Heritage. Motivations can include using web 2.0 tools, online collaboration, learning, needing librarian/archivist help for research.</li>
+                    </ul>
+                    <p>A 2017 study on users of Europeana highlighted the following motivations for users conducting searches on the site:</p> 
+                        <ul>
+                            <li>Using information to create a new work (books, exhibitions, presentation, academic studies).</li>
+                            <li>Cultural Heritage interest.</li>
+                            <li>Professional needs (research, fact checking).</li>
+                            <li>Teaching.</li>
+                        </ul>
+                    <p>A study for the National Museum of Military History in Copenhagen introduces a new type of user, hobbyists, that follows the definition of serious leisure introduced by Robert Stebbins. The study defined two types of hobbyists: collectors (interested in objects) and liberal arts enthusiasts (interested in historical and humanities knowledge). </p>
+                </div>
+                <div class="tab-pane fade mt-3" id="review" role="tabpanel" aria-labelledby="review-tab">
+                    <ul>
+                        <li>Digital Comic Museum: offers little data on users aside from a 2010 forum survey that found nearly half of users to be aged 40 or over.</li>
+                        <li>Grand Comic Database: a 2009 survey of 416 visitors found the majority reading language to be English and sex to be male (97%). Based on results to questions about reasons for use of the site, GCD highlighted three user types incl. interactive users (contributors to catalogue), research users, and personal users (no reasons given).</li>
+                        <li>Internet Archive: no user survey or meaningful information available, though the website has some general statistical information about user accounts, forum posts, and server usage.</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade mt-3" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+                    <ul>
+                        <li>Expertise level: Based on our research we think that users of comics-focused digital libraries can likely be split into three level of expertise similar to those mentioned by Walsh but with the lay and experienced combined into one type, which also bears similarities to the hobbyist type. These types can be summarized as researcher, contributor, and reader.</li>
+                        <li>Information needs: educational (researcher), specialist (contributor), and general (reader). </li>
+                        <li>Motivation and role: research, contribution, and personal enjoyment (reading).</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade mt-3" id="user" role="tabpanel" aria-labelledby="user-tab">
+                    <p>We would like to propose the following categories of user for our framework:</p>
+                    <ul>
+                        <li>Researcher: motivated by the production of academic or scholarly work, with a likely need for high quality metadata and services such as APIs. We believe that identifying a “professional” type would mostly be misleading (should it be a literature professor doing research on comics, a comic book editor, a comic artist?) but a researcher (academic or journalistic) type seems to be an ideal fit for the more engaged users of existing libraries such as GCD and DCM.</li>
+                        <li>Contributor: someone with an interest in comics high enough to want to contribute to the growth of a digital library’s offerings, and capable of learning the implications of using specific metadata schemas. Could be a researcher, but is more likely to be a fan motivated by the activity itself, especially when it comes to scanning material or adding entries to a catalogue.</li>
+                        <li>Reader: motivated by the desire to read first and foremost, but capable of crossing over into the other two types. Primarily passive and not necessarily interested in what happens behind the scenes though likely to have an opinion on how the library’s schemas impact their ability to find things.</li>
+                    </ul>
+                    <p>In the design of a digital library for comics it would be important to take into consideration both the needs of the reader, as a baseline user, who would benefit from an easy to use interface, and of researchers and contributors, who need to be able to add to or manipulate existing information. </p>
+                </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="v-child second-slide">
+            <div class="container flex-column">
+                <div class="p-5 mb-2">
+                    <!-- empty-->
+                </div>       
+                <div class="shadow-lg p-4 bg-body rounded overflow-auto">
+                    <h2>Recommendations</h2>
+                    <p>TK TK.</p>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">Summary</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="dcm-2-tab" data-bs-toggle="tab" data-bs-target="#dcm-2" type="button" role="tab" aria-controls="dcm-2" aria-selected="false">DCM</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="gcd-2-tab" data-bs-toggle="tab" data-bs-target="#gcd-2" type="button" role="tab" aria-controls="gcd-2" aria-selected="false">GCD</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="ia-2-tab" data-bs-toggle="tab" data-bs-target="#ia-2" type="button" role="tab" aria-controls="ia-2" aria-selected="false">IA</button>
+                        </li>
+                      </ul>
+                <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active mt-3" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    <ul>
+                        <li>Each library varies in content offerings, quality of metadata, and usability. Their choices of what to focus on (e.g. golden age comics, indexing, public contribution) creates the limitations for the library itself.</li>
+                        <li>DCM is arguably the weakest of the three libraries we've reviewed though it does have the benefit of offering public domain material, which is clearly of interest to researcher users.</li>
+                        <li>GCD offers the most robust user contribution system ideal for contributor users.</li>
+                        <li>Internet Archive offers the best user experience for actual consumption of comic books and thus for reader users.</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade mt-3" id="dcm-2" role="tabpanel" aria-labelledby="dcm-2-tab">
+                    <ul>
+                        <li>Implement use of generic bibliographic metadata standards, such as MARC, and dedicated ones, such as the Comic Book Ontology.</li>
+                        <li>Implement ML-powered services such as network analysis, statistics about comics (e.g. authors, nationality, gender etc…). </li>
+                        <li>Enable additional user contribution such as bibliographic cataloguing, annotation campaigns to enable OCR.</li>
+                        <li>Make data more easily available via a dedicated service.</li>
+                        <li>Modernise front-end design to move away from antiquated web solutions like message board software.</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade mt-3" id="gcd-2" role="tabpanel" aria-labelledby="gcd-2-tab">
+                    <ul>
+                        <li>Align existing schema with LOD standards, such as Schema or DC.</li>
+                        <li>Implement ML-powered services such as network analysis, statistics about comics (e.g. authors, nationality, gender etc…). </li>
+                        <li>Make data more easily available via an API rather than a dump.</li>
+                        <li>Implement semantic search and recommendation solutions.</li>
+                        <li>Modernise front-end design to make content more engaging, could also allow for better back-end interface for contributors.</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade mt-3" id="ia-2" role="tabpanel" aria-labelledby="ia-2-tab">
+                    <ul>
+                        <li>Improve textual information on about pages.</li>
+                        <li>Implement dedicated standards for specific medium, e.g. Comic Book Ontology for comics collection. Ultimately this could take the form of spinning off such collections into their own mini-sites which could be tied to existing collaborations IA has with libraries and archives.</li>
+                        <li>Implement ML-powered services such as network analysis, statistics about comics (e.g. authors, nationality, gender etc…).</li>
+                        <li>Implement semantic search additions.</li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
+        

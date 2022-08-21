@@ -25,3 +25,4 @@ let scrollTween = gsap.to(sections, {
       end: "+=3000"
     }
   }); 
+
