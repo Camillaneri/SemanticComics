@@ -194,6 +194,10 @@
     background-size: cover;
   }
 
+  .eight-slide{
+    background-color:#6e01e3;
+  }
+
   /* mobile fixes */ 
 
   @media (max-width: 425px) {
@@ -282,3 +286,7 @@
     background-color:rgba(0, 0, 0, 0.729)
   }
 
+  .icon_color{
+    color: #6e01e3;
+    filter: brightness(20%);
+  }
