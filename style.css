@@ -3,11 +3,31 @@
   @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
+  @import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
 
 /* text */
 
+  .title1{
+    font-family: 'Faster One';
+    color: #d13e18;
+    font-size: 450% !important;
+  }
+  .title2{
+    font-family: 'Angkor';
+    font-size: 440% !important;
+    color: #f3a600;
+  }
+  .title3{
+    font-family: 'Creepster';
+    font-size: 650% !important;
+    /*color:#588a07;*/
+    color:#7fb504;
+  }
+ 
   h1, h2 {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Angkor', cursive;
   }
 
   h1 {
@@ -17,6 +37,7 @@
 
   h2 {
     font-size: 2.5rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
   .storyheader {
@@ -71,6 +92,7 @@
 
   .bg-body {
     opacity: 95%;
+    margin:auto
   }
 
   .story {
@@ -94,7 +116,7 @@
   /* Photos background */
 
   .intro-slide {
-    background-image: url('imgs/erik-mclean-8SeJUmfahu0-unsplash.jpg');
+    background-image: url('imgs/brett-jordan-CsZQ50xO35I-unsplash.jpg');
     width: 100vw;
     height: 100vh;
     background-position: center;
@@ -107,6 +129,23 @@
   /* Color background */
 
   .first-slide {
+    background-color:#6e01e3;
+  }
+
+  .second-slide {
+    background-image: url('imgs/erik-mclean-27kCu7bXGEI-unsplash.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .second-half-slide{
+    background-color:#6e01e3;
+  }
+
+  .carousel0-slide{
     background-image: url('imgs/brett-jordan-CsZQ50xO35I-unsplash.jpg');
     width: 100vw;
     height: 100vh;
@@ -115,31 +154,11 @@
     background-size: cover;
   }
 
-  .second-slide {
-    background-color:blueviolet;
-  }
-
-  .third-slide {
-    background-color:coral;
-  }
-
   .fourth-slide {
-    background-color:burlywood;
+    background-color:#6e01e3;
   }
 
-  .fifth-slide {
-    background-color:darkred;
-  }
-
-  .second-2-slide{
-    background-color:rgb(76, 44, 255);
-  }
-
-  .third-2-slide {
-    background-color:rgb(35, 151, 0);
-  }
-
-  .carousel0-slide{
+  .carousel1-slide{
     background-image: url('imgs/jonathan-cooper-OOKnZA6nhqA-unsplash.jpg');
     width: 100vw;
     height: 100vh;
@@ -147,6 +166,34 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .sixth-slide {
+    background-color:#6e01e3;
+  }
+
+  .carousel2-slide{
+    background-image: url('imgs/miika-laaksonen-nUL9aPgGvgM-unsplash.jpg');
+    min-width: 70%;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .seventh-slide {
+    background-color:#6e01e3;
+  }
+
+  .carousel3-slide{
+    background-image: url('imgs/dev-d2Py_uhXJQo-unsplash.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   /* mobile fixes */ 
 
   @media (max-width: 425px) {
@@ -174,12 +221,13 @@
     display: none !important;
   }
 
-  .inside-carousel{
-    height: 60%;
+  .inside-slide{
+    min-height: 60%;
     margin-top: 10%;
     margin-bottom: 10%;
     margin-left: 10%;
     margin-right: 10%;
+    min-width: 70%;
   }
 
   
@@ -229,6 +277,8 @@
     margin-left: 4%;
   }
 
-  .contain-arrow{
-    
+  .coverpage{
+    margin-top: 10%;
+    background-color:rgba(0, 0, 0, 0.729)
   }
+
