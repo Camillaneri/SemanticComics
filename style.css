@@ -126,7 +126,7 @@
 
 
 
-  /* Color background */
+  /* Slides background */
 
   .first-slide {
     background-color:#6e01e3;
@@ -198,6 +198,30 @@
     background-color:#6e01e3;
   }
 
+  /* links colors */ 
+  .red_link{
+    color: #d13e18 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+  }
+  .green_link{
+    color: #7fb504 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+  }
+
+  .blue_link{
+    color: #0d6efd !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+  }
+
+  .orange_link{
+    color: #fd9301 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+  }
+
   /* mobile fixes */ 
 
   @media (max-width: 425px) {
@@ -226,44 +250,38 @@
   }
 
   .inside-slide{
-    min-height: 60%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-    min-width: 70%;
+    height: 60vh;
+    min-width: 70vw;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    overflow: scroll;
   }
 
-  
-  #chevron {
-   
-    position: relative;
-    text-align: center;
-    padding: 12px;
-    margin-bottom: 6px;
-    height: 60px;
-    width: 30px;
-  }
-  #chevron:before {
-    content: '';
+  .inside-slide:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%);
+    z-index: 3001;
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 10%;
-    width: 51%;
-    background: red;
-    transform: skew(0deg, 40deg);
+    bottom: 0;
   }
-  #chevron:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 10%;
-    width: 50%;
-    background: red;
-    transform: skew(0deg, -40deg);
-  }
+
+  /* Hide scrollbar */
+
+  .inside-slide::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.inside-slide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
   .hidden{
     visibility:hidden;
@@ -290,3 +308,20 @@
     color: #6e01e3;
     filter: brightness(20%);
   }
+
+
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 30px solid transparent;
+	border-left: 30px solid rgb(255, 255, 255);
+	border-bottom: 30px solid transparent;
+}
+
+.triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 30px solid transparent;
+	border-right: 30px solid rgb(255, 255, 255);
+	border-bottom: 30px solid transparent;
+}
