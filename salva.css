@@ -241,39 +241,15 @@ body{
   .p-5 {
     padding: 1.5rem !important;
   }
-
-
-.coverpage{
-  padding-top: 20vh !important;
-}
-
-.title1{
-font-size: 10vw !important;
-}
-.title2{
-font-size: 10vw !important;
-}
-.title3{
-font-size: 12vw !important;
-}
 }
 
 @media (max-width: 820px) {
   .shadow-lg {
     height: 750px;
   }
-
-.title1{
-  font-size: 10vw !important;
-  }
-  .title2{
-  font-size: 10vw !important;
-  }
-  .title3{
-  font-size: 12vw !important;
-  }
-
 }
+
+
 
 /*/////////////////////////////////////////////////////*/
 
@@ -284,11 +260,11 @@ font-size: 12vw !important;
 
 .inside-slide{
   height: 60vh;
-  width: 70vw;
+  min-width: 70vw;
   margin-top: 20vh;
   margin-bottom: 10vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
   overflow: scroll;
   /*box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%), 0px -40px 10px 0px rgb(255, 255, 255) inset; */
 }
@@ -296,7 +272,7 @@ font-size: 12vw !important;
 .inside-slide:after {
   content: "";
   display: block;
-  width: 60vw;
+  width: 70vw;
   margin-bottom: 10vh;
   
   margin-right: 30vw !important;
@@ -318,24 +294,23 @@ font-size: 12vw !important;
 
 .biblio-slide{
   height: 60vh;
-  width: 70vw;
+  min-width: 70vw;
   margin-top: 20vh;
   margin-bottom: 10vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
   overflow: scroll;
 }
 
 .biblio1-slide{
-  
- width: 70vw;
-  margin-top: 20vh;
-  margin-bottom: 10vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  overflow: scroll;
-}
-
+    height: 60vh;
+    min-width: 70vw;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    overflow: scroll;
+  }
 
 
 
@@ -393,26 +368,4 @@ scrollbar-width: none;  /* Firefox */
   border-top: 30px solid transparent;
   border-right: 30px solid rgb(255, 255, 255);
   border-bottom: 30px solid transparent;
-}
-
-.card{
-  background-color: #6e01e3 !important;
-  /*border: 5px solid rgb(255, 255, 255) !important;*/
-  margin-bottom: 0.7rem;
-  width: 70vw;
-  border: none !important;
-}
-
-.btn:focus {
-  outline: 0;
-  box-shadow: none !important;
-}
-
-.card-header {
-  padding: 0.5rem 1rem;
-  margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.138) !important;
-  background-color: none !important; 
-  border-bottom: none !important;
-  width: 70vw;
 }
