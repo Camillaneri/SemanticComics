@@ -364,12 +364,14 @@ font-size: 12vw !important;
 
 
 .biblio1-slide{
-  
- width: 70vw;
+  height: 70vh;
+  width: 70vw;
   margin-top: 12vh;
   margin-bottom: 10vh;
   margin-left: 15vw;
   margin-right: 15vw;
+  overflow: scroll;
+
   
 }
 
@@ -503,3 +505,4 @@ scrollbar-width: none;  /* Firefox */
 .shade{
   box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%); 
 }*/
+
