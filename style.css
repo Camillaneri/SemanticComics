@@ -29,7 +29,7 @@
   color:#7fb504;
 }
 
-h1, h2 {
+h1, h2, h5 {
   font-family: 'Angkor', cursive;
 }
 
@@ -41,6 +41,10 @@ h1 {
 h2 {
   font-size: 2.5rem !important;
   margin-bottom: 1.5rem !important;
+}
+
+h5{
+  font-size: 1.5rem !important;
 }
 
 .storyheader {
@@ -69,11 +73,16 @@ body{
 .v-child{
   scroll-snap-align: center;
   scroll-snap-stop: always;
-  overflow-y: scroll;
+
   height: 100vh;
   width: 100vw;
   display: flex;
 }
+
+.v-child {
+  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-scrollbar-width: none;  /* Firefox */
+  }
 
 .h-sect{
   scroll-snap-type: x mandatory;
@@ -201,6 +210,17 @@ body{
   background-color:#6e01e3;
 }
 
+
+.framework-slide{
+  background-image: url('frmrk/Last_smaller.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 /* links colors */ 
 .red_link{
   color: #d13e18 !important;
@@ -256,6 +276,11 @@ font-size: 10vw !important;
 .title3{
 font-size: 12vw !important;
 }
+
+.inside-slide:after {
+
+  width: 60vw !important;
+}
 }
 
 @media (max-width: 820px) {
@@ -273,6 +298,11 @@ font-size: 12vw !important;
   font-size: 12vw !important;
   }
 
+  .inside-slide:after {
+
+    width: 60vw !important;
+  }
+
 }
 
 /*/////////////////////////////////////////////////////*/
@@ -285,18 +315,18 @@ font-size: 12vw !important;
 .inside-slide{
   height: 60vh;
   width: 70vw;
-  margin-top: 20vh;
+ 
   margin-bottom: 10vh;
   margin-left: 15vw;
   margin-right: 15vw;
   overflow: scroll;
-  /*box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%), 0px -40px 10px 0px rgb(255, 255, 255) inset; */
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%); 
 }
 
 .inside-slide:after {
   content: "";
   display: block;
-  width: 60vw;
+  width: 65vw;
   margin-bottom: 10vh;
   
   margin-right: 30vw !important;
@@ -305,6 +335,42 @@ font-size: 12vw !important;
   z-index: 3001;
   position: absolute;
   bottom: 0;
+}
+
+.biblio-slide{
+  height: 60vh;
+  width: 70vw;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  overflow: scroll;
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%); 
+  
+}
+
+.biblio2-slide{
+  height: 60vh;
+  width: 70vw;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+ 
+
+  
+}
+
+
+
+.biblio1-slide{
+  
+ width: 70vw;
+  margin-top: 12vh;
+  margin-bottom: 10vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  
 }
 
 .cover-slide{
@@ -316,25 +382,6 @@ font-size: 12vw !important;
   /*box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%), 0px -40px 10px 0px rgb(255, 255, 255) inset; */
 }
 
-.biblio-slide{
-  height: 60vh;
-  width: 70vw;
-  margin-top: 20vh;
-  margin-bottom: 10vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  overflow: scroll;
-}
-
-.biblio1-slide{
-  
- width: 70vw;
-  margin-top: 20vh;
-  margin-bottom: 10vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  overflow: scroll;
-}
 
 
 
@@ -344,13 +391,31 @@ font-size: 12vw !important;
 .inside-slide::-webkit-scrollbar {
   display: none;
 }
-
+.biblio1-slide::-webkit-scrollbar {
+  display: none;
+}
+.biblio-slide::-webkit-scrollbar {
+  display: none;
+}
 
 
 .inside-slide {
 -ms-overflow-style: none;  /* IE and Edge */
 scrollbar-width: none;  /* Firefox */
 }
+
+.biblio1-slide {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+  }
+  
+.biblio-slide {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+    }
+    
+
+        
 
 .hidden{
   visibility:hidden;
@@ -399,7 +464,7 @@ scrollbar-width: none;  /* Firefox */
   background-color: #6e01e3 !important;
   /*border: 5px solid rgb(255, 255, 255) !important;*/
   margin-bottom: 0.7rem;
-  width: 70vw;
+  
   border: none !important;
 }
 
@@ -414,5 +479,27 @@ scrollbar-width: none;  /* Firefox */
   background-color: rgba(0, 0, 0, 0.138) !important;
   background-color: none !important; 
   border-bottom: none !important;
-  width: 70vw;
+ 
 }
+
+.title-carousel{
+  padding-top: 14vh;
+  padding-bottom: 0vh !important;
+  text-shadow:  0px 0rem 2rem rgb(0, 0, 0); 
+}
+
+/*TEAM*/
+
+
+.rounded-circle{
+  width: 15rem;
+  height: 15rem;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-bottom: 2vw ;
+}
+
+/*
+.shade{
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%); 
+}*/
