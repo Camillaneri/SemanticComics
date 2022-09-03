@@ -9,7 +9,12 @@
     <!-- base style -->
     <link rel="stylesheet" href="style.css"/>
     <!-- bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">\
+    <!-- meta info-->
+    <title>The Incredible Digital Comic Library Framework</title>
+    <meta name="description" content="A digital humanities project to propose a framework for semantic digital libraries dedicated to comic books." />
+    <meta name="author" content="Camilla Neri, Laura Travaglini, Laurent Fintoni" />
+    <meta name="keywords" content="Digital Humanities, comics, semantic web" />
     
 </head>
 <body>
@@ -39,8 +44,8 @@
                         <li>Definitions and state of the art in comics integration for digital libraries</li>
                         <li>Review of three existing resources</li>
                         <li>Outline of potential users</li>
-                        <li>Framework for creating or updating semantic digital libraries dedicated to comics</li>
-                        <li>Example implementation of framework using reviewed resources</li>
+                        <li>Sketch of a Framework for Semantic Digital Libraries for Comics</li>
+                        <li>Suggestions for implementation of framework on reviewed resources</li>
                     </ul>
                     </div>
                
@@ -70,7 +75,7 @@
                     <h2>Background & State of the Art</h2>
                     <p>Following their beginnings in the first half of the 19th century as social satire, comics were long thought as a non-serious literary format due in part to their intrinsic combination of texts and images. Their continuous popularity throughout the 20th century in the United States, Europe, and Japan would ultimately change this perception.</p> 
                     <p>Today, many fields within the humanities - such as literary studies or library and information science - treat comics as a serious subject of study while GLAM institutions - including the Library of Congress and Bibliothèque Nationale de France - consider it a valid acquisition for <a class="green_link" href="https://www.loc.gov/rr/news/comics.html" target="_blank">preservation</a> and investment for <a class="red_link" href="https://bdnf.bnf.fr/EN/index.html" target="_blank">public engagement</a>.</p>
-                    <p>Scroll left for an overview of existing research and projects dealing with comics and semantic digital technologies.</p>
+                    <p>Below is an overview of existing research and projects dealing with comics and semantic digital technologies.</p>
                 
             </div>
         </div>
@@ -79,7 +84,7 @@
         <!-- SLIDE 3-->
         <!-- Carousel -->
 <section class="v-child carousel0-slide">
-    <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+    <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -153,7 +158,7 @@
                 <h3><a class="blue_link" href="https://bdnf.bnf.fr/EN/index.html" target="_blank">Comics Factory</a>, <a class="orange_link" href="https://developer.marvel.com/" target="_blank">Marvel API</a>, <a class="red_link" href="https://comicvine.gamespot.com/api/" target="_blank">Comic Vine API</a>, <a class="green_link" href="https://metron.cloud/" target="_blank">Metron</a></h3>  
                 <p>Digital applications and interfaces offer an ideal way to make existing comics-related data and tools available to the public to both educate and entertain.</p> 
                 <p>Yet in our research we’ve only found one example of a non-commercial, public-funded app that combines cultural heritage and digital humanities: BnF’s BDnF: The Comics Factory, which lets users create digital comics using the library’s collections.</p>
-                <p>Alongside this there are a small number of APIs that deal with comics data including the aforementioned Marvel API, which grants access to information about the company’s publications; the Comic Vine API, giving access to data from Gamespot’s comic b   ook wiki for non-commercial use; and Metron, a community-driven effort intended as a counterpoint to Comic Vine’s corporate standing which is building an open database with REST API for comics and makes use of bibliographic data from the GCD.</p>
+                <p>Alongside this there are a small number of APIs that deal with comics data including the aforementioned Marvel API, which grants access to information about the company’s publications; the Comic Vine API, giving access to data from Gamespot’s comic book wiki for non-commercial use; and Metron, a community-driven effort intended as a counterpoint to Comic Vine’s corporate standing which is building an open database with REST API for comics and makes use of bibliographic data from the GCD.</p>
            
             </div>
           </div>
@@ -177,10 +182,14 @@
     <div class="flex-column">
         
         <div class="  p-5 bg-body rounded   biblio-slide">
-            <h2>Existing Resources - Reviews</h2>
-                        <p>A starting point for our project was to look at, and assess, three existing digital libraries dedicated to comics. From this assessment we developed the idea of sketching out a framework that could be used to enhance existing comics-focused digital libraries or create new ones.</p> 
-                        <p>The three resources we selected were: <a class="blue_link" href="https://digitalcomicmuseum.com/" target="_blank">Digital Comics Museum (DCM)</a>, the <a class="orange_link" href="https://www.comics.org/" target="_blank">Grand Comics Database (GCD)</a>, and the <a class="green_link" href="https://archive.org/details/comics" target="_blank">Internet Archive's Comic Books and Graphic Novels collection</a>.</p>
-                        <p>Scroll left for the reviews.</p>
+            <h2>Reviews</h2>
+                        <p>One of the starting points for our project was to look at, and assess, three existing digital libraries dedicated to comics. From this assessment we developed the idea of sketching out a framework that could be used to enhance existing comics-focused digital libraries or create new ones.</p> 
+                        <p>The three resources we selected were:</p>
+                          <ul>
+                            <li><a class="blue_link" href="https://digitalcomicmuseum.com/" target="_blank">Digital Comics Museum (DCM)</a></li>
+                            <li><a class="orange_link" href="https://www.comics.org/" target="_blank">Grand Comics Database (GCD)</a></li>
+                            <li><a class="green_link" href="https://archive.org/details/comics" target="_blank">the Internet Archive's Comic Books and Graphic Novels collection</a></li>
+                          </ul>
         </div>
     </div>
 </section>
@@ -189,7 +198,7 @@
         <!-- Carousel -->
 
         <section class="v-child carousel1-slide">
-            <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -200,7 +209,7 @@
                   
                 </div>
                 <div class="carousel-inner">
-                    <h2 class="text-white text-center title-carousel ">Existing Resources - Reviews</h2>
+                    <h2 class="text-white text-center title-carousel ">Reviews</h2>
                 <div class="carousel-item active">
                     <div class="  p-5 bg-body rounded   inside-slide">
                             <h2>DCM</h2>
@@ -445,7 +454,7 @@
         <!-- Carousel -->
 
         <section class="v-child carousel2-slide">
-            <div id="carouselExampleIndicators6" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div id="carouselExampleIndicators6" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -470,14 +479,6 @@
                         <li>Comics are an important part of public library offerings.</li>
                         <li>Readers enjoy a variety of types of comics, with manga a particularly important type regardless of the origin of the reader.</li>
                                 </ul>
-                            <p>Surveys referenced include:</p>
-                                <ul>
-                        <li>Chi è il lettore di fumetti in Italia? (Who is the comic reader in Italy?), 2021, AIR (Italian Reader Association), Italy </li>
-                        <li>Public Library Graphic Novels Survey, 2018, Library Journal, North America</li>
-                        <li>BD reader in France, 2020, IPSOS, France </li>
-                        <li>Montréal Library survey, 2005, Canada  </li>
-                        <li>Manga Planet survey, 2019, online </li>
-                                </ul>
                                 <p class="text-white">-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
                                 
                
@@ -488,7 +489,7 @@
                     <div class="carousel-item ">
                         <div class="  p-5 bg-body rounded   inside-slide">
                             <h2>Digital libraries</h2>
-                                <p>To understand the needs of digital libraries users we need to first understand who they are and why they might want to brwose.</p>
+                                <p>To understand the needs of digital libraries users we need to first understand who they are and why they might want to browse.</p>
                                 <p>A comparative study conducted by Walsh et al. (2016), reviewing existing literature on user characterization in digital archives, museums and libraries, identifies three different way to categorize users: by expertise level, by information needs, and by motivation and role.</p>
                                     <ul>
                         <li>Expertise level: four types of users incl. professional, lay, experienced, and novel.</li>
@@ -576,11 +577,11 @@
         
         <div class="  p-5 bg-body rounded   biblio-slide">
             <h2>Recommendations</h2>
+            <p>Each library varies in content offerings, quality of metadata, and usability. Their choices of what to focus on (e.g. golden age comics, indexing, public contribution) creates the limitations for the library itself.</p>
             <ul>
-                <li>Each library varies in content offerings, quality of metadata, and usability. Their choices of what to focus on (e.g. golden age comics, indexing, public contribution) creates the limitations for the library itself.</li>
                 <li>DCM is arguably the weakest of the three libraries we've reviewed though it does have the benefit of offering public domain material, which is clearly of interest to researcher users.</li>
-                <li>GCD offers the most robust user contribution system ideal for contributor users.</li>
-                <li>Internet Archive offers the best user experience for actual consumption of comic books and thus for reader users.</li>
+                <li>GCD offers the most robust user contribution system, ideal for contributor users.</li>
+                <li>Internet Archive offers the best user experience for actual consumption of comic books, and thus for reader users.</li>
             </ul>      
         </div>
     </div>
@@ -590,7 +591,7 @@
         <!-- Carousel -->
 
         <section class="v-child carousel3-slide">
-            <div id="carouselExampleIndicators9" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div id="carouselExampleIndicators9" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="1" aria-label="Slide 1"></button>
@@ -609,7 +610,7 @@
                             <h2>DCM</h2>
                             <ul>
                                 <li>Implement use of generic bibliographic metadata standards, such as MARC, and dedicated ones, such as the Comic Book Ontology.</li>
-                                <li>Implement ML-powered services such as network analysis, statistics about comics (e.g. authors, nationality, gender etc…). </li>
+                                <li>Implement ML-powered services such as network visualisation, statistics about comics (e.g. authors, nationality, gender etc…). </li>
                                 <li>Enable additional user contribution such as bibliographic cataloguing, annotation campaigns to enable OCR.</li>
                                 <li>Make data more easily available via a dedicated service.</li>
                                 <li>Modernise front-end design to move away from antiquated web solutions like message board software.</li>
@@ -622,10 +623,10 @@
                     <div class="  p-5 bg-body rounded   inside-slide">
                         <h2> GCD</h2>
                         <ul>
-                            <li>Align existing schema with LOD standards, such as Schema or DC.</li>
-                            <li>Implement ML-powered services such as network analysis, statistics about comics (e.g. authors, nationality, gender etc…). </li>
+                            <li>Align existing schema with LOD standards, such as Schema or DC, or with bibliographic standards.</li>
+                            <li>Implement ML-powered services such as network visualisation, statistics about comics (e.g. authors, nationality, gender etc…). </li>
                             <li>Make data more easily available via an API rather than a dump.</li>
-                            <li>Implement semantic search and recommendation solutions.</li>
+                            <li>Implement semantic search and recommendation solutions, aided by a knowledge graph.</li>
                             <li>Modernise front-end design to make content more engaging, could also allow for better back-end interface for contributors.</li>
                         </ul>
                         <p class="text-white">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
@@ -637,10 +638,9 @@
                         
                         <h2>IA</h2>
                         <ul>
-                            <li>Improve textual information on about pages.</li>
+                            <li>Improve textual information in about pages.</li>
                             <li>Implement dedicated standards for specific medium, e.g. Comic Book Ontology for comics collection. Ultimately this could take the form of spinning off such collections into their own mini-sites which could be tied to existing collaborations IA has with libraries and archives.</li>
-                            <li>Implement ML-powered services such as network analysis, statistics about comics (e.g. authors, nationality, gender etc…).</li>
-                            <li>Implement semantic search additions.</li>
+                            <li>Implement ML-powered services such as network visualisation, statistics about comics (e.g. authors, nationality, gender etc…).</li>
                         </ul>
                         
                         
@@ -703,23 +703,23 @@
         <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
           <div class="card-body">
             
-            <p>    * A Comics Ontology  <a class="white_link" href="http://www.r4isstatic.com/231" target="_blank">website</a></p>
-            <p>    * Advanced Comic Book Format (ACBF) <a class="white_link" href="https://launchpad.net/acbf/" target="_blank">website</a></p>
-            <p>    * BDnF: The Comics Facts <a class="white_link" href="https://bdnf.bnf.fr/EN/index.html" target="_blank">website</a></p>
-            <p>    * Comic Book Markup Language (CBML) <a class="white_link" href="https://dcl.ils.indiana.edu/cbml/" target="_blank">website</a></p>
-            <p>    * Comic Book Ontology (CBO) <a class="white_link" href="https://comicmeta.org/cbo/" target="_blank">website</a></p>
-            <p>    * Comic Metadata (CoMet) <a class="white_link" href="http://www.denvog.com/comet/" target="_blank">website</a></p>
-            <p>    * Comic Vine API <a class="white_link" href="https://comicvine.gamespot.com/api/" target="_blank">website</a></p>
-            <p>    * Comics as Data: North America (CADNA) <a class="white_link" href="https://graphicpossibilities.hcommons.org/comics-as-data-north-america-cadna/" target="_blank">website</a></p>
-            <p>    * ComicsML (XML for digital comics) <a class="white_link" href="http://comicsml.jmac.org" target="_blank">website</a></p>
-            <p>   * Digital Comic Museum (DCM) <a class="white_link" href="https://digitalcomicmuseum.com" target="_blank">website</a></p>
-            <p>    * Grand Comics Database (GCD) <a class="white_link" href="https://www.comics.org" target="_blank">website</a></p>
-            <p>    * Internet Archive’s Comic Books and Graphic Novels <a class="white_link" href="https://archive.org/details/comics" target="_blank">website</a></p>
-            <p>    * Marvel API <a class="white_link" href="https://developer.marvel.com" target="_blank">website</a></p>
-            <p>    * Schema.org’s ComicSeries type <a class="white_link" href="https://schema.org/ComicSeries" target="_blank">website</a></p>
-            <p>    * Metron <a class="white_link" href="https://metron.cloud" target="_blank">website</a></p>
-            <p>    * The Graphic Narrative Corpus (GNC) <a class="white_link" href="https://groups.uni-paderborn.de/graphic-literature/gncorpus/corpus.php" target="_blank">website</a></p>
-            <p>   * The Visual Language Research Corpus (VLRC) <a class="white_link" href="https://www.visuallanguagelab.com/vlrc" target="_blank">website</a></p>
+            <p>    * A Comics Ontology. URL: <a class="white_link" href="http://www.r4isstatic.com/231" target="_blank">http://www.r4isstatic.com/231</a></p>
+            <p>    * Advanced Comic Book Format (ACBF). URL: <a class="white_link" href="https://launchpad.net/acbf/" target="_blank">https://launchpad.net/acbf/</a></p>
+            <p>    * BDnF: The Comics Facts. URL: <a class="white_link" href="https://bdnf.bnf.fr/EN/index.html" target="_blank">https://bdnf.bnf.fr/EN/index.html</a></p>
+            <p>    * Comic Book Markup Language (CBML). URL: <a class="white_link" href="https://dcl.ils.indiana.edu/cbml/" target="_blank">https://dcl.ils.indiana.edu/cbml/</a></p>
+            <p>    * Comic Book Ontology (CBO). URL: <a class="white_link" href="https://comicmeta.org/cbo/" target="_blank">https://comicmeta.org/cbo/</a></p>
+            <p>    * Comic Metadata (CoMet). URL: <a class="white_link" href="http://www.denvog.com/comet/" target="_blank">http://www.denvog.com/comet/</a></p>
+            <p>    * Comic Vine API. URL: <a class="white_link" href="https://comicvine.gamespot.com/api/" target="_blank">https://comicvine.gamespot.com/api/</a></p>
+            <p>    * Comics as Data: North America (CADNA). URL: <a class="white_link" href="https://graphicpossibilities.hcommons.org/comics-as-data-north-america-cadna/" target="_blank">https://graphicpossibilities.hcommons.org/comics-as-data-north-america-cadna/</a></p>
+            <p>    * ComicsML (XML for digital comics). URL: <a class="white_link" href="http://comicsml.jmac.org" target="_blank">http://comicsml.jmac.org</a></p>
+            <p>   * Digital Comic Museum (DCM). URL: <a class="white_link" href="https://digitalcomicmuseum.com" target="_blank">https://digitalcomicmuseum.com</a></p>
+            <p>    * Grand Comics Database (GCD). URL: <a class="white_link" href="https://www.comics.org" target="_blank">https://www.comics.org</a></p>
+            <p>    * Internet Archive’s Comic Books and Graphic Novels Collections. URL: <a class="white_link" href="https://archive.org/details/comics" target="_blank">https://archive.org/details/comics</a></p>
+            <p>    * Marvel API. URL: <a class="white_link" href="https://developer.marvel.com" target="_blank">https://developer.marvel.com</a></p>
+            <p>    * Schema.org’s ComicSeries type. URL: <a class="white_link" href="https://schema.org/ComicSeries" target="_blank">https://schema.org/ComicSeries</a></p>
+            <p>    * Metron. URL: <a class="white_link" href="https://metron.cloud" target="_blank">https://metron.cloud</a></p>
+            <p>    * The Graphic Narrative Corpus (GNC). URL: <a class="white_link" href="https://groups.uni-paderborn.de/graphic-literature/gncorpus/corpus.php" target="_blank">https://groups.uni-paderborn.de/graphic-literature/gncorpus/corpus.php</a></p>
+            <p>   * The Visual Language Research Corpus (VLRC). URL: <a class="white_link" href="https://www.visuallanguagelab.com/vlrc" target="_blank">https://www.visuallanguagelab.com/vlrc</a></p>
  </div>
         </div>
       </div>
@@ -732,11 +732,11 @@
         <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
           <div class="card-body ">
             
-            <p>* Chi è il lettore di fumetti in Italia? (Who is the comic reader in Italy?), 2021, AIE (Italian Editors Association), Italy <a class="white_link" href="https://network.aie.it/Portals/_default/Skede/Allegati/Skeda105-6495-2021.12.2/PLPL_5dic_Chi%20è%20il%20lettore%20di%20fumetti%20in%20Italia-F.pdf?IDUNI=lhqflmd5k1erygbf3bs1e21i2923" target="_blank">website</a></p>
-            <p>* Public Library Graphic Novels Survey, 2018, Library Journal, North America <a class="white_link" href="https://s3.amazonaws.com/WebVault/surveys/LJ%202018%20Graphic%20Novels%20Survey%20REPORT.pdf" target="_blank">website</a></p>
-            <p>* BD reader in France, 2020, IPSOS, France <a class="white_link" href="https://centrenationaldulivre.fr/donnees-cles/les-francais-et-la-bd" target="_blank">website</a></p>
+            <p>* <a class="white_link" href="https://network.aie.it/Portals/_default/Skede/Allegati/Skeda105-6495-2021.12.2/PLPL_5dic_Chi%20è%20il%20lettore%20di%20fumetti%20in%20Italia-F.pdf?IDUNI=lhqflmd5k1erygbf3bs1e21i2923" target="_blank">Chi è il lettore di fumetti in Italia? (Who is the comic reader in Italy?), 2021, AIE (Italian Editors Association), Italy</a></p>
+            <p>* <a class="white_link" href="https://s3.amazonaws.com/WebVault/surveys/LJ%202018%20Graphic%20Novels%20Survey%20REPORT.pdf" target="_blank">Public Library Graphic Novels Survey, 2018, Library Journal, North America</a></p>
+            <p>* <a class="white_link" href="https://centrenationaldulivre.fr/donnees-cles/les-francais-et-la-bd" target="_blank">BD reader in France, 2020, IPSOS, France </a></p>
+            <p>* <a class="white_link" href="https://mangaplanet.com/manga-planet-community-survey-1-responses/" target="_blank">Manga Planet survey, 2019, online</a></p>
             <p>* Charbonneau, Olivier (2005) Adult Graphic Novel Readers: A Survey in a Montreal Library. Young Adult Library Services, 3 (4). pp. 39-42. ISSN 1541-4302</p>
-            <p>* Manga Planet survey, 2019, online <a class="white_link" href="https://mangaplanet.com/manga-planet-community-survey-1-responses/" target="_blank">website</a></p>
          </div>
         </div>
       </div>
@@ -777,7 +777,7 @@
 <section class="v-child sixth-slide">
     <div class=" flex-column biblio2-slide">
     <h2 class="text-center text-white team_title"> Meet the team</h2>
-   
+    <p class="text-white text-center">This project was created and presented as part of the requirements for the Semantic Digital Libraries course within the Digital Humanities & Digital Knowledge Master's at the University of Bologna, a/y 2021-2022.</p>
      <div class="container mt-3">
         <div class="row">
             <div class="col-md-4 shade">
@@ -785,7 +785,7 @@
                 <img class="img-responsive rounded-circle" src="imgs/trouble.jpg" >
                 </div>
                 <div class="bg-white p-3 text-center rounded box">
-                    <h5 class="mt-3 name">Laurent Fintoni</h5><span class="work d-block">Comapay agents house</span><span class="work d-block">real estate</span>
+                    <h5 class="mt-3 name">Laurent Fintoni</h5>French but exiled abroad for so long he now writes in English.
                     <div class="mt-4">
                        
                     </div>
