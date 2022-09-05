@@ -212,12 +212,13 @@ body{
 
 
 .framework-slide{
-  background-image: url('frmrk/FINAL.jpg');
+  background-color:#ffffff;
+ /*  background-image: url('frmrk/FINAL.jpg');
   width: 100vw;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 90%; */
 }
 
 
@@ -349,10 +350,23 @@ font-size: 12vw !important;
   
 }
 
+.biblios-slide{
+  height: 65vh;
+  width: 70vw;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  overflow: scroll;
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%); 
+  
+}
+
+
 .biblio2-slide{
   height: 60vh;
   width: 70vw;
-  margin-top: 20vh;
+  margin-top: 10vh;
   margin-bottom: 10vh;
   margin-left: 15vw;
   margin-right: 15vw;
@@ -370,6 +384,18 @@ font-size: 12vw !important;
   margin-bottom: 10vh;
   margin-left: 15vw;
   margin-right: 15vw;
+  overflow: scroll;
+
+  
+}
+
+.img-slide{
+  height: 99vh;
+  width: 99vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
   overflow: scroll;
 
   
@@ -399,7 +425,12 @@ font-size: 12vw !important;
 .biblio-slide::-webkit-scrollbar {
   display: none;
 }
-
+.biblios-slide::-webkit-scrollbar {
+  display: none;
+}
+.img-slide::-webkit-scrollbar {
+  display: none;
+}
 
 .inside-slide {
 -ms-overflow-style: none;  /* IE and Edge */
@@ -415,7 +446,16 @@ scrollbar-width: none;  /* Firefox */
     -ms-overflow-style: none !important;  /* IE and Edge */
     scrollbar-width: none !important;  /* Firefox */
     }
-    
+.biblios-slide {
+      -ms-overflow-style: none !important;  /* IE and Edge */
+      scrollbar-width: none !important;  /* Firefox */
+      }
+  
+
+.img-slide::-webkit-scrollbar {
+      -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+    }
 
         
 
@@ -506,3 +546,11 @@ scrollbar-width: none;  /* Firefox */
   box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%); 
 }*/
 
+.img-h{
+  margin-top: 2vw;
+  margin-left: 4vw;
+  height: 40rem;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-bottom: 2vw;
+}
